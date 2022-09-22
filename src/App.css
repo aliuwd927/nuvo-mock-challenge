@@ -1,0 +1,76 @@
+@import-normalize;
+
+.App {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Top Container */
+
+.top_Container{
+  outline: auto;
+  width: 100%;
+}
+
+/* Header Container */
+.header_Container{
+  outline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bottom Container */
+.bottom_Container{
+  outline: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+/* Items Container */
+.items_Container{
+  outline: auto;
+}
+
+img{
+  width: 50%;
+  height: 50%;
+}
+
+.shopItems{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-flex;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+
+/* Descriptions */
+.description_Container{
+  outline: auto;
+}

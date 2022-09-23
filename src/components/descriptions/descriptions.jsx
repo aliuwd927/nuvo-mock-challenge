@@ -19,7 +19,9 @@ export default function Description(props) {
             </p>
           </div>
 
-          <button className="add_Cart_Btn">Add Cart</button>
+          <div className="btn_Container">
+            <button className="add_Cart_Btn">Add Cart</button>
+          </div>
         </div>
       )}
     </div>

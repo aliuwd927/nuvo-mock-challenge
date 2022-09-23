@@ -7,8 +7,6 @@ export default function Items(props) {
   //useState to ensure we are targeting the right element we are clicking for the arrows
   const [storeItemId, setStoreItemId] = useState(null);
 
-  const [isActive, setIsActive] = useState(false);
-
   //useEffect to call the API once to get data
   useEffect(() => {
     getShopItemsAPI();

@@ -1,5 +1,12 @@
 # nuvo-mock-challenge
 
+# Website URL
+ Netlify:
+  https://andynuvomock.netlify.app/
+
+Vercel: 
+  https://nuvo-mock-challenge.vercel.app/
+
 
 # Instructions
 
@@ -17,15 +24,12 @@
   4. The app must be fully responsive (mobile, tablet and desktop)
 
 
-
+# API:
 
 Retrieve data using an HTTP request from this API:
 https://fakestoreapi.com/products?limit=5
 
 
-
-# Website URL
- /development-test/
 
 # Getting Started with Create React App
 

@@ -4,17 +4,17 @@ export default function Description(props) {
       {/* if showDescription is null, render nothing, else render the follow item object */}
       {props.showDescription === null ? null : (
         <div className="showDescription_Container">
-          <p>
+          <p className="description price_Text">
             <b>${props.showDescription.price}</b>
           </p>
-          <p>
+          <p className="description description_Text">
             <b>{props.showDescription.description}</b>
           </p>
           <div className="rating_Container">
-            <p>
+            <p className="description rating_Text">
               <b>{props.showDescription.rating.rate}</b>
             </p>
-            <p>
+            <p className="description rating_Count_Text">
               <b>({props.showDescription.rating.count})</b>
             </p>
           </div>

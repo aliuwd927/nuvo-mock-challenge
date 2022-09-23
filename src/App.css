@@ -1,5 +1,7 @@
 @import-normalize;
 
+/* Desktop CSS */
+
 body{
   background-color: #faf0e6;
 }
@@ -68,6 +70,7 @@ img{
   align-items: center;
   padding-left: 1rem;
   width: 80%;
+  height: 100%;
 }
 .arrow_Container{
   border: 2px solid #3498db;
@@ -108,13 +111,11 @@ img{
 
 .showDescription_Container{
   display: flex;
-  width: 80%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   justify-self: center;
   align-items: flex-start;
-  padding: 1rem;
-  gap: 1rem;
   background-color: white;
 }
 
@@ -133,4 +134,38 @@ img{
   font-size: 1rem;
   color: white;
   background-color: #3498db;
+}
+
+/*
+  Set CSS Media Queries for the following Mobile sizes:
+
+  - 425 px
+
+  - 375 px
+
+  - 325 px
+
+  - We can probably group everying into a specfic point
+
+*/
+
+
+
+    /*Device 600px and BELOW*/
+@media all and (max-width: 600px) {
+  /*Apply Element*/
+
+  .shopItems_Text{
+    display: none;
+  }
+
+  .shopItems{
+    padding: 0;
+    width: 100%;
+  }
+
+  .description{
+    font-size: 0.7rem;
+  }
+ 
 }

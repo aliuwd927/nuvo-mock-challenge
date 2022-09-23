@@ -29,9 +29,6 @@ export default function Items(props) {
       console.log(err);
     }
   }
-
-  let arrowContainer = "arrow_Container";
-
   /**
    *
    * Handles the arrow and lifting state up to App.jsx
@@ -44,7 +41,6 @@ export default function Items(props) {
    *
    * When ID mathes, arrow flips
    */
-
   function handleToggleArrow(id, description) {
     if (storeItemId === id) {
       setStoreItemId(undefined);
@@ -67,14 +63,14 @@ export default function Items(props) {
         return (
           <div className="shopItems" key={items.id}>
             <img src={items.image} alt={items.title} />
-            <p>
+            <p className="shopItems_Text">
               <b>{items.title}</b>
             </p>
             {/*Conditionally Render the arrow left or right.
                Conditionally Render Bg Color / Arrow Color
             */}
             <div
-              className={arrowContainer}
+              className="arrow_Container"
               style={{
                 backgroundColor: storeItemId === items.id ? "#3498db" : "",
               }}

@@ -21,7 +21,6 @@ body{
   justify-content: center;
   align-items: center;
   width: 100%;
-  outline: auto;
 }
 
 /* Header Container */
@@ -41,7 +40,7 @@ body{
   width: 100%;
 }
 
-p{
+p,b{
   word-wrap: break-word;
 }
 
@@ -71,10 +70,20 @@ img{
   width: 80%;
 }
 .arrow_Container{
+  border: 2px solid #3498db;
+  width: 100%;
+  max-width: 40px;
+  height: 100%;
+  max-height: 40px;
+  border-radius: 100%;
   margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .arrow {
-  border: solid black;
+  border: solid;
   border-width: 0 0.2rem 0.2rem 0;
   display: inline-block;
   padding: 0.2rem;

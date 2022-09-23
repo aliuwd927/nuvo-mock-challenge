@@ -7,6 +7,8 @@ export default function Items(props) {
   //useState to ensure we are targeting the right element we are clicking for the arrows
   const [storeItemId, setStoreItemId] = useState(null);
 
+  const [isActive, setIsActive] = useState(false);
+
   //useEffect to call the API once to get data
   useEffect(() => {
     getShopItemsAPI();
@@ -29,6 +31,8 @@ export default function Items(props) {
       console.log(err);
     }
   }
+
+  let arrowContainer = "arrow_Container";
 
   /**
    *
@@ -68,17 +72,28 @@ export default function Items(props) {
             <p>
               <b>{items.title}</b>
             </p>
-            {/*Conditionally Render the arrow left or right  */}
-            <p className="arrow_Container">
+            {/*Conditionally Render the arrow left or right.
+               Conditionally Render Bg Color / Arrow Color
+            */}
+            <div
+              className={arrowContainer}
+              style={{
+                backgroundColor: storeItemId === items.id ? "#3498db" : "",
+              }}
+              onClick={() => {
+                //Toggles the arrow, sends items object to lift state up.
+                handleToggleArrow(items.id, items);
+              }}
+            >
               <i
                 className={`arrow ${
                   storeItemId === items.id ? "right" : "left"
                 }`}
-                onClick={() => {
-                  handleToggleArrow(items.id, items);
+                style={{
+                  color: storeItemId === items.id ? "white" : "#3498db",
                 }}
               ></i>
-            </p>
+            </div>
           </div>
         );
       })}

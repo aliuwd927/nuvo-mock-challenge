@@ -1,13 +1,25 @@
 export default function Description(props) {
   return (
     <div className="description_Container">
+      {/* if showDescription is null, render nothing, else render the follow item object */}
       {props.showDescription === null ? null : (
-        <div>
-          <div>{props.showDescription.price}</div>
-          <div>{props.showDescription.description}</div>
-          <div>{props.showDescription.rating.rate}</div>
-          <div>{props.showDescription.rating.count}</div>
-          <button>Add Cart</button>
+        <div className="showDescription_Container">
+          <p>
+            <b>${props.showDescription.price}</b>
+          </p>
+          <p>
+            <b>{props.showDescription.description}</b>
+          </p>
+          <div className="rating_Container">
+            <p>
+              <b>{props.showDescription.rating.rate}</b>
+            </p>
+            <p>
+              <b>({props.showDescription.rating.count})</b>
+            </p>
+          </div>
+
+          <button className="add_Cart_Btn">Add Cart</button>
         </div>
       )}
     </div>

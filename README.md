@@ -1,9 +1,31 @@
 # nuvo-mock-challenge
 
+
+# Instructions
+
+  1. Clicking on the image, item name or round chevron button should display the corresponding
+    product information in the white box to the right.
+    (Add to card button doesn't need to do anything)
+
+
+  2. Rotate the chevron button and fill in its color if the product is selected is active.
+
+
+  3. SEO is extremely important to us. All text content should be visible in the HTML
+    even though it might be hidden from the user.
+
+  4. The app must be fully responsive (mobile, tablet and desktop)
+
+
+
+
 Retrieve data using an HTTP request from this API:
 https://fakestoreapi.com/products?limit=5
 
 
+
+# Website URL
+ /development-test/
 
 # Getting Started with Create React App
 

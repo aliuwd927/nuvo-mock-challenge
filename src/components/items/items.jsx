@@ -1,16 +1,21 @@
 import { useEffect, useState } from "react";
 
 export default function Items(props) {
+  //store API to useState. Use .map() to render multiple divs for elements in API
   const [shopItems, setShopItems] = useState([]);
+
+  //useState to ensure we are targeting the right element we are clicking for the arrows
   const [storeItemId, setStoreItemId] = useState(null);
 
+  //useEffect to call the API once to get data
   useEffect(() => {
     getShopItemsAPI();
   }, []);
 
+  //store api in variable
   const API_URL = "https://fakestoreapi.com/products?limit=5";
 
-  //Fetch Item using ASYNC / AWAIT
+  //Fetch API data using ASYNC / AWAIT
   async function getShopItemsAPI() {
     //Add Error Handling
     try {
@@ -18,11 +23,25 @@ export default function Items(props) {
       let itemResponse = await fetch(API_URL);
       //Use itemReponse.json() to returns [{},{},{},{},{}]
       let storeItems = await itemResponse.json();
+      //Sets shopitems state to render items
       setShopItems(storeItems);
     } catch (err) {
       console.log(err);
     }
   }
+
+  /**
+   *
+   * Handles the arrow and lifting state up to App.jsx
+   *
+   * Pass props into description component
+   *
+   * Treat description like arrow toggle.
+   *
+   * When ID matches, show / hide description
+   *
+   * When ID mathes, arrow flips
+   */
 
   function handleToggleArrow(id, description) {
     if (storeItemId === id) {
@@ -33,6 +52,7 @@ export default function Items(props) {
       props.setShowDescription(description);
     }
   }
+
   /**
    *
    * When we click on the element, ONLY that element arrow changes.
@@ -49,7 +69,7 @@ export default function Items(props) {
               <b>{items.title}</b>
             </p>
             {/*Conditionally Render the arrow left or right  */}
-            <p>
+            <p className="arrow_Container">
               <i
                 className={`arrow ${
                   storeItemId === items.id ? "right" : "left"

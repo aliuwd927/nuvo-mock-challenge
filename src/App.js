@@ -5,6 +5,7 @@ import Description from "./components/descriptions/descriptions";
 import { useState } from "react";
 
 function App() {
+  //Lift upstate to pass from items component to description component
   const [showDescription, setShowDescription] = useState(null);
 
   return (
@@ -36,12 +37,12 @@ export default App;
  *
  *
  *
- * 2. For Styling => FlexBox
+ * 2. For Styling => FlexBox ( Grid is probably the best here )
  *
  *  -Create 2 divs to have clear seperations for css.
  *
  *  -Top Section and Bottom Section
- *  -Use Percentages
+ *  - Use Percentages for css when possible
  *
  *
  *
@@ -53,6 +54,9 @@ export default App;
  *
  *
  * API URL : https://fakestoreapi.com/products?limit=5
+ *
+ *
+ * 3. "Try to build as much from scratch w/o relying on external lib and pkg"
  *
  */
 

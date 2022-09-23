@@ -153,15 +153,24 @@ img{
 
     /*Device 600px and BELOW*/
 @media all and (max-width: 600px) {
-  /*Apply Element*/
+
+  img {
+    width: 50%;
+    max-width: 100px;
+    height: 50%;
+    max-height: 150px;
+}
 
   .shopItems_Text{
-    display: none;
+    font-size: 0.7rem;
   }
 
   .shopItems{
+    display: flex;
+    flex-direction: column;
     padding: 0;
     width: 100%;
+    height: 100%;
   }
 
   .description{

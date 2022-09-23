@@ -126,6 +126,11 @@ img{
   gap: 1rem;
 }
 
+.rating_Text{
+  font-size: 1.2rem;
+  color: gold;
+}
+
 .btn_Container{
   display: flex;
   justify-content: center;
